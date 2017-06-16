@@ -1,0 +1,181 @@
+/* test stylesheet */
+/* last update:06/16/2017 */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  font-family: le-monde-livre-classic-std-s, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  min-height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+a, button, img {
+	text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+img {
+    border: none;
+    outline: none;
+    vertical-align: bottom;
+}
+
+a, p, ul, li, h1, h2, h3, h4, h5, h6, figure, img{
+	margin: 0;
+}
+.clear{
+    clear: both;
+}
+.together{
+    display: inline-block;
+}
+/* End of together */
+.wrapper{
+    width:100%;
+   /* max-width: 1024px;*/
+    margin: 0 auto;
+    height: auto;
+    overflow-x: hidden;
+    background: #f1f1f1;
+    min-height: 100%;
+}
+/* End of wrapper */
+
+header{   
+    height: auto;
+    padding: 40px 0;
+    position: relative;
+    clear: both;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 333;
+}
+/* End of header */
+.logo{
+    max-width: 184px;
+}
+
+.logo img{
+    max-width: 184px;
+}
+
+section{
+    max-width:90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+       
+}
+/* End of section */
+
+.leftContent{
+   position: relative;
+    max-width: 450px;
+    min-height: 400px;
+    background: #fff;
+    padding: 20px;
+    z-index: 2;
+}
+.leftContent p{
+    line-height: 24px;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+/* End of left content */
+
+.imageContent{
+   max-width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    /* text-align: center; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.imageContent img{
+    max-width: 100%;
+}
+
+.imageContent::before{
+        content: '';
+    padding-bottom: 450px;
+    position: relative;
+    background: url(oskar-vertetics.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    /* background: #994f4f; */
+    height: 450px;
+    position: absolute;
+    left: 450px;
+    right: 0;
+    /* top: 0; */
+    /* bottom: 0; */
+    z-index: 1;
+}
+.imageContent::after{
+   content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 146px;
+    background: #86866E;
+    z-index: 0;
+}
+
+@media(max-width:767px){
+    .leftContent{
+        display: block;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .imageContent::before{
+        content: '';
+        padding-bottom: 450px;
+        position: relative;
+        background: url(oskar-vertetics.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        /* background: #994f4f; */
+        height: 450px;
+        position: absolute;
+        left: 450px;
+        right: 0;
+        /* top: 0; */
+        /* bottom: 0; */
+        z-index: 1;
+    }
+    .imageContent::after{
+       content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 146px;
+        background: #86866E;
+        z-index: 0;
+    }
+}
